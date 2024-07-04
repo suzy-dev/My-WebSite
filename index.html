@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu WebSite</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <img src="fotinha.jpeg" alt="fotinha">
+                <div class="header-text">
+                    <h1>Suzana Souza Araujo</h1>
+                    <p>Desenvolvedor Júnior</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="about">
+            <div class="container">
+                <h2>Sobre Mim</h2>
+                <p class="text-about-me">Me chamo <b>Suzana</b>, tenho 21 anos e estou no último ano do curso de <b>Ciência da 
+                    Computação na Universidade Cruzeiro do Sul</b>. Possuo dois anos de experiência na área de tecnologia, 
+                    principalmente através de estágios que me proporcionaram habilidades técnicas e comportamentais. 
+                    Aprecio o universo da musculação e da alimentação saudável. Pratico esportes, sendo o voleibol o meu favorito. Valorizo ambientes de 
+                    trabalho leves e agradáveis, onde posso me desenvolver sem a toxicidade comum em muitos ambientes corporativos. 
+                    Reconheço que tenho uma tendência a esquecimentos, o que me motivou a desenvolver habilidades 
+                    excepcionais de organização. Utilizo aplicativos de lembrete e cadernos físicos para manter
+                    minha organização, o que contribui significativamente para minha tranquilidade e eficiência no trabalho.</p>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="container">
+                <h2>Projetos</h2>
+                <div class="projects-grid">
+                    <!-- Aqui você pode listar seus projetos -->
+                    <div class="project">
+                        <h3>Nome do Projeto</h3>
+                        <p>Descrição breve do projeto.</p>
+                        <a href="#">Ver mais</a>
+                    </div>
+                    <div class="project">
+                        <h3>Nome do Projeto</h3>
+                        <p>Descrição breve do projeto.</p>
+                        <a href="#">Ver mais</a>
+                    </div>
+                    <!-- Adicione mais projetos conforme necessário -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <form id="contact-form" method="post" action="enviar_formulario.php">
+                <div class="form-group">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensagem:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+            <div id="form-message"></div>
+        </div>
+    </section>
+    
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Suzana Araujo. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+<br><br>
+    <script src="script.js"></script>
+</body>
+</html>

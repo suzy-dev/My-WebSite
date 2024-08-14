@@ -6,8 +6,8 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    font-family: OCR A Std, monospace;
+    line-height: 1.5;
     background-color: #f4f4f4;
     color: #333;
 }
@@ -20,12 +20,13 @@ body {
 
 /* cabeçalho */
 header {
-    background: #333;
+    background: #CB6CE6;
     color: #fff;
     padding: 40px 0;
     text-align: center;
     opacity: 0; 
     animation: fadeIn 2s forwards; 
+    border: solid #333333 ; 
 }
 
 @keyframes fadeIn {
@@ -50,8 +51,9 @@ header .container {
 .header-content img {
     width: 250px; 
     height: 250px;
-    border-radius: 50%;
-    object-fit: cover; 
+    object-fit: cover;
+    border: solid whitesmoke 5px;
+    border-radius: 50%; 
 }
 
 .header-text {
@@ -67,8 +69,14 @@ header p {
     font-size: 1.5em;
 }
 
+/* estilos do aboutme */
+.text-about-me {
+    text-align: justify;
+}
+
 /* estilos main */
 main {
+    font-size: 1.25rem;
     padding: 40px 0;
 }
 
@@ -88,25 +96,25 @@ h2 {
     gap: 20px;
 }
 
-.project {
+.box-project {
     background: #fff;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.project h3 {
+.box-project h3 {
     font-size: 1.5em;
     margin-bottom: 0.5em;
 }
 
-.project p {
+.box-project p {
     font-size: 1.1em;
     line-height: 1.6;
     margin-bottom: 1em;
 }
 
-.project a {
+.box-project a {
     display: inline-block;
     background: #333;
     color: #fff;
@@ -192,7 +200,19 @@ h2 {
     color: #333;
 }
 
-/* estilos do aboutme */
-.text-about-me {
-    text-align: justify;
+
+/* estilos redes sociais */
+
+.box-redes-sociais {
+    display: flex;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.box-redes-sociais img{
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
 }

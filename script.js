@@ -1,7 +1,7 @@
 // ---------- FORM DE CONTATO -------------//
 
 document.getElementById("contact-form").addEventListener("submit", function(event) {
-    event.preventDefault(); // Evita o envio padrão do formulário
+    event.preventDefault() // Evita o envio padrão do formulário
 
     // Coletando dados do formulário
     var formData = new FormData(this);
@@ -16,44 +16,66 @@ document.getElementById("contact-form").addEventListener("submit", function(even
     })
     .then(function(text) {
         // Exibindo mensagem de sucesso ou erro
-        document.getElementById("form-message").innerHTML = text;
+        document.getElementById("form-message").innerHTML = text
     })
     .catch(function(error) {
-        console.error('Erro ao enviar o formulário:', error);
+        console.error('Erro ao enviar o formulário:', error)
         document.getElementById("form-message").innerHTML = "Ocorreu um erro ao enviar o formulário. Por favor, tente novamente mais tarde.";
     });
 });
 
 
-// ---------- BANNER CURRICULO -------------//
+// ---------- BANNER CURRICULO ------------- //
 
 document.addEventListener('DOMContentLoaded', function () {
-    const banner = document.getElementById('download-banner');
-    const closeButton = document.getElementById('close-banner');
+    const banner = document.getElementById('download-banner')
+    const closeButton = document.getElementById('close-banner')
 
     // Função para mostrar o banner após 5 segundos
     function showBanner() {
         setTimeout(() => {
-            banner.style.display = 'block';
+            banner.style.display = 'block'
         }, 5000); // 5000 milissegundos = 5 segundos
     }
 
     // Função para fechar o banner
     closeButton.addEventListener('click', function () {
-        banner.style.display = 'none';
+        banner.style.display = 'none'
     });
 
     // Mostrar o banner após o carregamento da página
     showBanner();
 
     // Mostrar o banner quando o usuário rolar até a seção "About Me" (exemplo)
-    const aboutMeSection = document.querySelector('.text-about-me');
+    const aboutMeSection = document.querySelector('.text-about-me')
     if (aboutMeSection) {
         window.addEventListener('scroll', function () {
-            const rect = aboutMeSection.getBoundingClientRect();
+            const rect = aboutMeSection.getBoundingClientRect()
             if (rect.top < window.innerHeight) {
-                banner.style.display = 'block';
+                banner.style.display = 'block'
             }
         });
     }
 });
+
+// ---------- BANNER CURRICULO ------------- //
+
+function setLightTheme() {
+        document.body.classList.remove('dark-theme');
+        document.body.classList.add('light-theme');
+        localStorage.setItem('theme', 'light');
+    }
+
+function setDarkTheme() {
+        document.body.classList.remove('light-theme');
+        document.body.classList.add('dark-theme');
+        localStorage.setItem('theme', 'dark');
+    }
+
+    // Verifica o tema preferido ao carregar a página
+    document.addEventListener('DOMContentLoaded', () => {
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.body.classList.add(savedTheme + '-theme');
+    });
+
+
